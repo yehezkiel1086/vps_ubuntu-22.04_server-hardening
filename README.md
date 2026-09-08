@@ -1,7 +1,6 @@
 # Ubuntu 22.04 VPS Hardening Script
 
 A modular, idempotent bash hardening suite for Ubuntu 22.04 LTS servers.
-Every change is logged, backed up, and validated before applying.
 
 ## What It Hardens
 
@@ -72,26 +71,26 @@ ssh -p 2299 -i ~/.ssh/your_key deploy@your-server-ip
 ## Usage
 
 ```bash
-# Interactive (recommended for first run)
+# interactive (recommended for first run)
 sudo bash harden.sh
 
-# Non-interactive (CI/automation)
+# non-interactive (CI/automation)
 sudo bash harden.sh --yes
 
-# Custom config file
+# custom config file
 sudo bash harden.sh --config /path/to/my.conf
 
-# Preview only — no changes
+# preview only — no changes
 sudo bash harden.sh --dry-run
 
-# Run a single module only
+# run a single module only
 sudo bash harden.sh --only ssh
 sudo bash harden.sh --only fail2ban
 
-# Skip a module
+# skip a module
 sudo bash harden.sh --skip services
 
-# Run only specific module without preflight (direct)
+# run only specific module without preflight (direct)
 sudo bash lib/05_fail2ban.sh
 ```
 
@@ -220,4 +219,4 @@ also consider:
 
 ## License
 
-MIT — use freely, modify for your environment.
+MIT

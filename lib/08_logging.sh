@@ -12,7 +12,7 @@ run() {
     fi
 }
 
-# ── log file permissions ──────────────────────────────────────────────────────
+# log file permissions
 
 log INFO "logging: hardening log file permissions..."
 
@@ -43,7 +43,7 @@ if [[ "${DRY_RUN}" == false ]]; then
     log INFO "logging: /var/log set to 750"
 fi
 
-# ── logrotate ─────────────────────────────────────────────────────────────────
+# logrotate
 
 log INFO "logging: setting log retention to ${LOG_ROTATE_WEEKS:-52} weeks..."
 
@@ -88,7 +88,7 @@ EOF
     log INFO "logging: custom logrotate config written"
 fi
 
-# ── rsyslog ───────────────────────────────────────────────────────────────────
+# rsyslog
 
 log INFO "logging: hardening rsyslog..."
 
@@ -111,7 +111,7 @@ if [[ "${DRY_RUN}" == false ]]; then
     fi
 fi
 
-# ── process accounting ────────────────────────────────────────────────────────
+# process accounting
 
 if [[ "${ENABLE_PROCESS_ACCOUNTING:-true}" == true ]]; then
     log INFO "logging: enabling process accounting (acct)..."
@@ -132,7 +132,7 @@ if [[ "${ENABLE_PROCESS_ACCOUNTING:-true}" == true ]]; then
     fi
 fi
 
-# ── auditd ────────────────────────────────────────────────────────────────────
+# auditd
 
 if [[ "${ENABLE_AUDITD:-true}" == true ]]; then
     log INFO "logging: installing auditd..."
@@ -221,7 +221,7 @@ EOF
     fi
 fi
 
-# ── journald ──────────────────────────────────────────────────────────────────
+# journald
 
 log INFO "logging: hardening journald..."
 

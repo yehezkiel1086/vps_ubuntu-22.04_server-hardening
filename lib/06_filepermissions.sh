@@ -27,7 +27,7 @@ apply_perm() {
     fi
 }
 
-# ── sensitive system files ────────────────────────────────────────────────────
+# sensitive system files
 
 log INFO "permissions: hardening sensitive system files..."
 
@@ -55,7 +55,7 @@ fi
 
 apply_perm 600 root:root /etc/sysctl.conf
 
-# ── world-writable files ──────────────────────────────────────────────────────
+# world-writable files
 
 log INFO "permissions: scanning for world-writable files..."
 
@@ -83,7 +83,7 @@ else
     log DRY "would scan for world-writable files"
 fi
 
-# ── suid/sgid audit ───────────────────────────────────────────────────────────
+# suid/sgid audit
 
 log INFO "permissions: scanning for suid/sgid binaries..."
 
@@ -144,7 +144,7 @@ else
     log DRY "would scan and audit suid/sgid binaries"
 fi
 
-# ── /tmp hardening ────────────────────────────────────────────────────────────
+# /tmp hardening
 
 log INFO "permissions: securing temp directories..."
 

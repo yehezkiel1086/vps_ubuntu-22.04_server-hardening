@@ -25,7 +25,7 @@ if [[ "${DRY_RUN}" == false ]]; then
 # 99-hardening.conf — kernel hardening via sysctl
 # applied by harden.sh
 
-# ── ipv4 network ──────────────────────────────────────────────────────────────
+# ipv4 network 
 
 # this is a server, not a router
 net.ipv4.ip_forward = 0
@@ -75,7 +75,7 @@ net.ipv4.tcp_keepalive_probes = 5
 # protect against tcp time-wait assassination attacks (rfc 1337)
 net.ipv4.tcp_rfc1337 = 1
 
-# ── ipv6 network ──────────────────────────────────────────────────────────────
+# ipv6 network 
 
 net.ipv6.conf.all.accept_ra = 0
 net.ipv6.conf.default.accept_ra = 0
@@ -85,7 +85,7 @@ net.ipv6.conf.all.accept_source_route = 0
 net.ipv6.conf.default.accept_source_route = 0
 net.ipv6.conf.all.forwarding = 0
 
-# ── kernel memory and execution ───────────────────────────────────────────────
+# kernel memory and execution
 
 # restrict kernel pointer exposure in dmesg and /proc/kallsyms
 kernel.kptr_restrict = 2
@@ -114,7 +114,7 @@ fs.protected_hardlinks = 1
 fs.protected_fifos = 2
 fs.protected_regular = 2
 
-# ── misc ──────────────────────────────────────────────────────────────────────
+# misc
 
 fs.file-max = 65535
 
